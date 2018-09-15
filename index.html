@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jugando y Aprendiendo la ISO 25000</title>
+    <meta name="description" content="Inspiration for drag and drop interactions for the modern UI" />
+    <meta name="keywords" content="drag and drop, interaction, inspiration, web design, ui" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/bottom-area.css" />
+    <script src="js/modernizr.custom.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top Navigation -->
+        <div class="content">
+            <header class="codrops-header">
+                <h1>ISO 25000 <span>Jugando y Aprendiendo las Características de la ISO 25000 para desarrollar Software de Calidad</span></h1>
+                <nav class="codrops-demos">
+                    <a class="current-demo" href="index.html">Bottom Area</a>
+                    <a href="sidebar.html">Sidebar</a>
+                </nav>
+            </header>
+            <div id="grid" class="grid clearfix">
+                <div class="grid__item"><span class="font-sub">COMPLETITUD FUNCIONAL</span></div>
+                <div class="grid__item"><span class="font-sub">CORRECTITUD FUNCIONAL</span></div>
+                <div class="grid__item"><span class="font-sub">PERTINENCIA FUNCIONAL</span></div>
+                <div class="grid__item"><span class="font-sub">COMPORTAMIENTO TEMPORAL</span></div>
+                <div class="grid__item"><span class="font-sub">UTILIZACIÓN DE RECURSOS</span></div>
+                <div class="grid__item"><span class="font-sub">CAPACIDAD</span></div>
+                <div class="grid__item"><span class="font-sub">COEXISTENCIA</span></div>
+                <div class="grid__item"><span class="font-sub">INTEROPERABILIDAD</span></div>
+                <div class="grid__item"><span class="font-sub">RECONOCIMIENTO ADECUADO</span></div>
+                <div class="grid__item"><span class="font-sub">FACILIDAD DE APRENDIZAJE</span></div>
+                <div class="grid__item"><span class="font-sub">OPERATIVIDAD</span></div>
+                <div class="grid__item"><span class="font-sub">PROTECCIÓN A ERRORES DE USSUARIO</span></div>
+                <div class="grid__item"><span class="font-sub">ESTÉTICA DE LA INTERFAZ</span></div>
+                <div class="grid__item"><span class="font-sub">ACCESIBILIDAD</span></div>
+                <div class="grid__item"><span class="font-sub">MADUREZ</span></div>
+                <div class="grid__item"><span class="font-sub">DISPONIBILIDAD</span></div>
+                <div class="grid__item"><span class="font-sub">TOLERANCIA A ERRORES</span></div>
+                <div class="grid__item"><span class="font-sub">CAPACIDAD DE RECUPERACIÓN</span></div>
+                <div class="grid__item"><span class="font-sub">CONFIDENCIALIDAD</span></div>
+                <div class="grid__item"><span class="font-sub">INTEGRIDAD</span></div>
+                <div class="grid__item"><span class="font-sub">NO REPUDIO</span></div>
+                <div class="grid__item"><span class="font-sub">RESPONSABILIDAD<span class="font-sub"></div>
+                <div class="grid__item"><span class="font-sub">AUTENTICIDAD</span></div>
+                    <div class="grid__item"><span class="font-sub">MODULARIDAD</span></div>
+                    <div class="grid__item"><span class="font-sub">REUSABILIDAD</span></div>
+                    <div class="grid__item"><span class="font-sub">ANALIZABILIDAD</span></div>
+                    <div class="grid__item"><span class="font-sub">CAPACIDAD DE SER MODIFICADO</span></div>
+                    <div class="grid__item"><span class="font-sub">CAPACIDAD DE SER PROBADO</span></div>
+                    <div class="grid__item"><span class="font-sub">ADAPTABILIDAD</span></div>
+                    <div class="grid__item"><span class="font-sub">FACILIDAD DE INSTALACIÓN</span></div>
+                    <div class="grid__item"><span class="font-sub">INTERCAMBIO</span></div>
+
+
+            </div>
+            <!-- Related demos -->
+            <section class="related">
+
+            </section>
+        </div><!-- /content -->
+    </div><!-- /container -->
+    <div id="drop-area" class="drop-area">
+        <div>
+            <div class="drop-area__item">
+                <span class="font-cat">ADECUACIÓN FUNCIONAL</span>
+                <div class="dummy"></div>
+            </div>
+            <div class="drop-area__item">
+               <span class="font-cat">EFICIENCIA DE DESEMPEÑO</span>
+                <div class="dummy"></div>
+            </div>
+            <div class="drop-area__item">
+               <span class="font-cat">COMPATIBILIDAD</span>
+                <div class="dummy"></div>
+            </div>
+            <div class="drop-area__item">
+               <span class="font-cat">USABILIDAD</span>
+                <div class="dummy"></div>
+            </div>
+            <div class="drop-area__item">
+               <span class="font-cat">FIABILIDAD</span>
+                <div class="dummy"></div>
+            </div>
+            <div class="drop-area__item">
+               <span class="font-cat">SEGURIDAD</span>
+                <div class="dummy"></div>
+            </div>
+            <div class="drop-area__item">
+               <span class="font-cat">MANTENIBILIDAD</span>
+                <div class="dummy"></div>
+            </div>
+            <div class="drop-area__item">
+               <span class="font-cat">PORTABILIDAD</span>
+                <div class="dummy"></div>
+            </div>
+        </div>
+    </div>
+    <div class="drop-overlay"></div>
+    <script src="js/draggabilly.pkgd.min.js"></script>
+    <script src="js/dragdrop.js"></script>
+    <script>
+        (function() {
+            var body = document.body,
+                dropArea = document.getElementById('drop-area'),
+                droppableArr = [],
+                dropAreaTimeout;
+
+            // initialize droppables
+            [].slice.call(document.querySelectorAll('#drop-area .drop-area__item')).forEach(function(el) {
+                droppableArr.push(new Droppable(el, {
+                    onDrop: function(instance, draggableEl) {
+                        // show checkmark inside the droppabe element
+                        classie.add(instance.el, 'drop-feedback');
+                        clearTimeout(instance.checkmarkTimeout);
+                        instance.checkmarkTimeout = setTimeout(function() {
+                            classie.remove(instance.el, 'drop-feedback');
+                        }, 800);
+                        // ...
+                    }
+                }));
+            });
+
+            // initialize draggable(s)
+            [].slice.call(document.querySelectorAll('#grid .grid__item')).forEach(function(el) {
+                new Draggable(el, droppableArr, {
+                    draggabilly: {
+                        containment: document.body
+                    },
+                    onStart: function() {
+                        // add class 'drag-active' to body
+                        classie.add(body, 'drag-active');
+                        // clear timeout: dropAreaTimeout (toggle drop area)
+                        clearTimeout(dropAreaTimeout);
+                        // show dropArea
+                        classie.add(dropArea, 'show');
+                    },
+                    onEnd: function(wasDropped) {
+                        var afterDropFn = function() {
+                            // hide dropArea
+                            classie.remove(dropArea, 'show');
+                            // remove class 'drag-active' from body
+                            classie.remove(body, 'drag-active');
+                        };
+
+                        if (!wasDropped) {
+                            afterDropFn();
+                        } else {
+                            // after some time hide drop area and remove class 'drag-active' from body
+                            clearTimeout(dropAreaTimeout);
+                            dropAreaTimeout = setTimeout(afterDropFn, 400);
+                        }
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
